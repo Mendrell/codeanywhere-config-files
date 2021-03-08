@@ -1,0 +1,35 @@
+{
+  "run": [
+    {
+      // Run configuration name
+      "name": "default",
+      
+      "default": true,
+
+      // Current working dir
+      "cwd": "~/workspace",
+
+      // Run commands list
+      "commands": [
+        // Attach to Apache server logs
+        "sudo tail -f /var/log/apache2/access.log -f /var/log/apache2/error.log"
+      ],
+
+      // Environment variables
+      "environment": {
+
+      },
+
+      // Open preview url in a new tab after setting environment variables and executing all commands
+      "preview": {
+        "url": "https://{{DOMAIN}}/"
+      }
+    }
+  ],
+  "find_in_files": {
+    "ignore": [
+      // File types to ignore in search
+      ".git", ".svn", "*.min.js" 
+    ]
+  }
+}
